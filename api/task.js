@@ -55,8 +55,8 @@ module.exports = app => {
             .first()
             .then(task => {
                 if (!task) {
-                    const msg = `Task com id ${req.params.id} não encontrada`
-                    return res.status(400).send(msg) 
+                    const msg = `Task com id ${req.params.id} não encontrada.`
+                    return res.status(400).send(msg)
                 }
 
                 const doneAt = task.doneAt ? null : new Date()
